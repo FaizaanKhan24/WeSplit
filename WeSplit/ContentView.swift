@@ -60,6 +60,7 @@ struct ContentView: View {
                 
                 Section{
                     Text(totalBillAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .background(tipPercentage == 0 ? .red : Color(UIColor.systemBackground))
                 } header: {
                     Text("Total amount after tax")
                 }
